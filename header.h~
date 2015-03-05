@@ -6,7 +6,8 @@
 //Task class represents a task in a Job.
 class task
 {
- 
+
+ private:
  // member variables
  int task_id; // task id unqiue for each task in a job.
  int CPU_time; // Amount of time CPU takes to execute the task.
@@ -27,98 +28,103 @@ class task
  int get_memrequired() { return memory_required;}
  
  //Set functions
- void set_taskid() { task_id = taskid; }
- void set_cputime() { CPU_time = cputime;}
- void set_memrequired() { memory_required = memoryrequired; }
+ void set_taskid(int taskid) { task_id = taskid; }
+ void set_cputime(int cputime) { CPU_time = cputime;}
+ void set_memrequired(int memoryrequired) { memory_required = memoryrequired; }
 
-}
+};
 
 class Job
-{
-    
+{ 
+    private :   
     int job_id;
-    std::vector <std::list<task> > adlist(5);    
-    public:
+    std::vector <std::list<task> > adlist;    
+    
+    public :    
+    Job()
+    {
+    }
     //constructor
-    Job(int jobid, std::vector <std::list<task> > graph)
+    Job(int jobid, std::vector <std::list<task> > &graph)
     {
       job_id = jobid;
       adlist = graph;
     }
-    
-}
+ };
 
 class Global_Clock
 {
   int counter;
-}
+};
 
-class JobGen_PJS : Job
+class JobGen_PJS : public Job
 {
-   
+ public:
+   JobGen_PJS() : Job(){}
 
-}
+};
 
 class Node_PJS
 {
-}
+};
 
 class CCU_Node
 {
 
-}
+};
 
 class PJS_Node
 {
 
-}
+};
 
 class CCU_PJS
 {
 
-}
+};
 
-class communication : Global_Clock, JobGen_PJS, Node_PJS, CCU_Node, PJS_Node, CCU_PJS
+class communication : Global_Clock, public JobGen_PJS, Node_PJS, CCU_Node, PJS_Node, CCU_PJS
 {
+  public:
+     communication() {}
+};
 
-}
-
-class Job_Generator : communication
+class Job_Generator : public communication
 {
  
    public: 
    
-   void genereate_jobs(std::vector <std::list<task>> Graph)
+   void genereate_jobs(std::vector <std::list<task> > &Graph)
    {
-        Job job_obj = new Job(Graph);
+        Job job_obj = new Job(1,Graph);
    }
-      
+    
 
-}
+};
 
 class PJS : communication
 {
 
-}
+};
 
 class Apollo : PJS
 {
 
-}
+};
 
 class Baseline : PJS
 {
  
-}
+};
 
 class CCU : communication
 {
 
-}
+};
 
 class Node : communication
 {
  
-}
+};
 
 

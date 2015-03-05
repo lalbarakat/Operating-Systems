@@ -28,4 +28,5 @@ void main()
   adlist[4].push_back(t1);        
   adlist[4].push_back(t0);        
 
+  job_gen.genereate_jobs(adlist);
 }

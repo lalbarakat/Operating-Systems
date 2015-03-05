@@ -6,7 +6,7 @@
 
 
 
-void main()
+int main()
 {
   
   Job_Generator job_gen = new Job_Generator();
@@ -29,4 +29,6 @@ void main()
   adlist[4].push_back(t0);        
 
   job_gen.genereate_jobs(adlist);
+  
+  return 0;
 }
