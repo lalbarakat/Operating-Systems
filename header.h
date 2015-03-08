@@ -119,7 +119,7 @@ class Baseline : PJS
 
 class CCU : communication
 {
-
+  std::vector<std::vector<int>> wait_time_matrix;
 };
 
 class Node : communication
