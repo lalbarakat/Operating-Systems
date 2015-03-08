@@ -13,7 +13,7 @@ class task
     int CPU_time; // Amount of time CPU takes to execute the task.
     int memory_required; // Amount of Main Memory required to execute the task.
 
- public :
+  public :
    // Constructor
    task(int taskid, int cputime, int memoryrequired)
    {
@@ -38,7 +38,7 @@ class Job
 {
   private :
     int job_id;
-    std::vector <std::list<task> > adlist;    
+    std::vector <std::list<task> > adlist;
 
   public :
     Job()
@@ -70,7 +70,7 @@ class Node_PJS
 
 class CCU_Node
 {
-
+  int memory_usage;
 };
 
 class PJS_Node
@@ -92,8 +92,12 @@ class communication : Global_Clock, public JobGen_PJS, Node_PJS, CCU_Node, PJS_N
 class Job_Generator : public communication
 {
 
+
   std::vector<Job> list_jobs;
-  public: 
+
+
+  public:
+
 
     void genereate_jobs(std::vector <std::list<task> > &Graph)
     {
@@ -147,7 +151,12 @@ class Baseline : PJS
 
 class CCU : communication
 {
-  std::vector<std::vector<int> > wait_time_matrix;
+  private:
+    std::vector<std::vector<int>> wait_time_matrix;
+    std::vector <Node*> node_list;
+  public:
+    int apply_matrix(Task t);
+    void update_matrix();
 };
 
 class Node : communication
