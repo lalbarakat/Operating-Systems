@@ -1,5 +1,6 @@
 #include <header.h>
 #include <vector>
+#include <task.h>
 
 class Job
 {
