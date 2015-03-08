@@ -96,7 +96,7 @@ class Job_Generator : public communication
 
     void genereate_jobs(std::vector <std::list<task> > &Graph)
     {
-      Job job_obj = new Job(1,Graph);
+      Job *job_obj = new Job(1,Graph);
     }
 
 };
@@ -118,7 +118,7 @@ class Baseline : PJS
 
 class CCU : communication
 {
-  std::vector<std::vector<int>> wait_time_matrix;
+  std::vector<std::vector<int> > wait_time_matrix;
 };
 
 class Node : communication
