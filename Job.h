@@ -1,3 +1,6 @@
+#ifndef JOB_H
+#define JOB_H
+
 #include<stdio.h>
 #include<iostream>
 #include<list>
@@ -22,3 +25,4 @@ class Job
       adlist = graph;
     }
 };
+#endif
