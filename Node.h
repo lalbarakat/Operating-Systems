@@ -1,4 +1,4 @@
-#include <header.h>
+#include "Communication.h"
 
 class Node : communication
 {

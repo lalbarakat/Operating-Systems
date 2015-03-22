@@ -1,0 +1,6 @@
+
+class PJS_Node
+{
+
+};
+

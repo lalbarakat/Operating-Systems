@@ -1,6 +1,9 @@
-#include <header.h>
+#include<stdio.h>
+#include<iostream>
+#include<list>
+
 #include <vector>
-#include <task.h>
+#include "Task.h"
 
 class Job
 {

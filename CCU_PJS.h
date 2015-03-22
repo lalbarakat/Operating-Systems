@@ -1,0 +1,6 @@
+class CCU_PJS
+{
+
+};
+
+

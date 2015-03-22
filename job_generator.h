@@ -1,4 +1,10 @@
-#include<header.h>
+#include "Job.h"
+#include "Communication.h"
+#include<stdio.h>
+#include<iostream>
+#include<vector>
+#include<list>
+
 class Job_Generator : public communication
 {
   std::vector<Job> list_jobs;
@@ -16,14 +22,14 @@ class Job_Generator : public communication
       for(itr=list_jobs.begin();itr!=list_jobs.end();itr++)
       {
         Job *job = *itr;
-        cout<< "job id" << job->job_id;
-        cout<<"Graph";
+//        cout<< "job id" << job->job_id;
+ //       cout<<"Graph";
       }
     }
 
     void DFS(int el,std::vector <std::list<task> > &adlist,int visited[])
     {
-      cout<<"  element is  "<<el;
+   //   cout<<"  element is  "<<el;
       std::list<task> listt = adlist[el];
       for(std::list<task>::iterator k = listt.begin();k!=listt.end();k++)
       {

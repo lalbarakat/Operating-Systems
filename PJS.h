@@ -1,4 +1,5 @@
-#include <header.h>
+#include "Communication.h"
+
 class PJS : communication
 {
 
