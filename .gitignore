@@ -36,3 +36,60 @@
 .Trashes
 ehthumbs.db
 Thumbs.db 
+# Executables #
+###############
+*.exe
+*.out
+*.app
+# general swap/backup files #
+#############################
+*.so
+*.log
+*.out
+*~
+*.swp
+*.DS_Store
+*.lock
+*~
+*.pdb
+*.dylib
+*.obj
+*.o
+*.a
+*.exe
+*.dll
+a.out
+*.exp
+*.lib
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.com
+*.class
+*.dll
+*.exe
+*.so
+*.out
+# Precompiled Headers
+*.gch
+*.pch
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+# Fortran module files
+*.mod
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
