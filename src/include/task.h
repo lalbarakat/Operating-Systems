@@ -1,4 +1,5 @@
-
+#ifndef TASK_H
+#define TASK_H
 
 //Task class represents a task in a Job.
 class task
@@ -31,3 +32,4 @@ class task
 
 };
 
+#endif
